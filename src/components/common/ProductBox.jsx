@@ -8,7 +8,7 @@ export default function ProductBox({
   oldPrice,
 }) {
   return (
-    <div className="relative mt-6 w-64 ">
+    <div className="relative my-6 w-64 ">
       <img src={source} alt={title} className="w-full h-full " />
       <h5 className="font-bold mt-6">{title}</h5>
       <p className="  text-[#737373] font-bold mt-4">{category}</p>

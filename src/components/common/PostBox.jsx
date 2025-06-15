@@ -11,7 +11,7 @@ export default function PostBox({ source }) {
         <img
           src={source}
           alt={source}
-          className="w-[330px] h-[300px]  object-cover"
+          className="w-full h-[300px]  object-cover"
         />
       </div>
       <div className="flex flex-wrap p-6 pb-9 gap-4">
