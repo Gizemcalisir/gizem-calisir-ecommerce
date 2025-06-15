@@ -13,9 +13,11 @@ import {
   Mail,
   ChevronDown,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <header className="w-full bg-white shadow p-4">
@@ -53,19 +55,29 @@ export default function Header() {
         </div>
 
         <div className="hidden sm:flex sm:gap-4">
-          <a href="#" className="text-[#737373]">
+          <a onClick={() => navigate("/")} className="text-[#737373]">
             Home
           </a>
 
           {/* Shop Dropdown */}
           <div className="relative">
-            <button
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="text-[#737373] font-semibold flex items-center gap-1"
-            >
-              Shop
-              <ChevronDown size={16} />
-            </button>
+            <div className="flex items-center gap-1 text-[#737373] font-semibold">
+              {/* Shop yazısı tıklanınca yönlendir */}
+              <span
+                onClick={() => navigate("/shop")}
+                className="cursor-pointer"
+              >
+                Shop
+              </span>
+
+              {/* Ok ikonuna tıklanınca dropdown aç/kapat */}
+              <button
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                className="p-1"
+              >
+                <ChevronDown size={16} />
+              </button>
+            </div>
 
             {isDropdownOpen && (
               <div className="absolute top-full mt-2 w-[420px] bg-white shadow-lg rounded p-4 z-50 flex gap-8">
