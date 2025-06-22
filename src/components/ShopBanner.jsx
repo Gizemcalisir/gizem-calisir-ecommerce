@@ -15,7 +15,7 @@ export default function ShopBanner() {
           <h6 className="text-[#BDBDBD] font-bold text-sm">Shop</h6>
         </div>
       </div>
-      <div className="flex flex-col gap-4 sm:flex-row">
+      <div className="flex flex-col w-full gap-4 items-center sm:flex-row sm:justify-center">
         <CampaignBanner title="CLOTHS" count="5" source="/shop-banner-1.png" />
         <CampaignBanner title="CLOTHS" count="5" source="/shop-banner-2.png" />
         <CampaignBanner title="CLOTHS" count="5" source="/shop-banner-3.png" />
