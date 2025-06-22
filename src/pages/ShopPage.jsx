@@ -3,7 +3,7 @@ import ShopBanner from "../components/ShopBanner";
 import FilterSection from "../components/FilterSection";
 import FeaturedProducts from "../components/FeaturedProducts";
 import Pagination from "../components/Pagination";
-import Brands from "../components/brands";
+import Brands from "../components/Brands";
 
 export default function ShopPage() {
   return (
