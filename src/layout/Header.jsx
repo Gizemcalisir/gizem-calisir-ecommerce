@@ -211,9 +211,16 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="mt-12 flex flex-col items-center gap-[30px] text-[#252B42] font-montserrat sm:hidden">
-        <a href="#" className="text-[#737373]">
+      <div className="mt-12 flex flex-col items-center gap-[30px] text-[#252B42] font-montserrat w-auto sm:hidden">
+        <a href="" onClick={() => navigate("/")} className="text-[#737373]">
           Home
+        </a>
+        <a
+          href=""
+          onClick={() => navigate("/shop")}
+          className="text-[#737373] font-semibold"
+        >
+          Shop
         </a>
         <a href="#" className="text-[#737373] font-semibold">
           Product
